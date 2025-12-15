@@ -1,12 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Github, Linkedin, Instagram, Download } from 'lucide-react'
 
 const socialLinks = [
-  { icon: Github, label: 'GitHub', href: 'https://github.com' },
-  { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com' },
-  { icon: Twitter, label: 'Twitter', href: 'https://twitter.com' },
+  { icon: Github, label: 'GitHub', href: 'https://github.com/JuanmaBigo' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/juan-mateo-bigoritto-0048651ba/' },
+  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/juanmabigo/' },
 ]
 
 export function Contact() {
@@ -15,6 +15,7 @@ export function Contact() {
       id="contact" 
       data-nav-theme="contact"
       className="min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-black to-gray-900 pt-32 pb-20"
+      style={{ scrollSnapAlign: 'none' }}
     >
       <div className="container mx-auto px-6 lg:px-12 text-center">
         <motion.div
@@ -25,21 +26,34 @@ export function Contact() {
           className="max-w-3xl mx-auto"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white">
-            Trabajemos juntos
+            Let's Build Something Great
           </h2>
           <p className="text-xl text-gray-400 mb-12">
-            Estoy disponible para proyectos freelance, colaboraciones y oportunidades full-time. ¡Charlemos!
+            Open to exciting opportunities, collaborations, and challenging projects. Let's connect and create something amazing together.
           </p>
           
-          <motion.a
-            href="mailto:tu@email.com"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-semibold text-lg hover:bg-gray-200 transition-colors mb-12"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Mail size={24} />
-            tu@email.com
-          </motion.a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <motion.a
+              href="mailto:juanmateobigoritto@gmail.com"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-semibold text-lg hover:bg-gray-200 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Mail size={24} />
+              Get in Touch
+            </motion.a>
+            
+            <motion.a
+              href="/assets/JuanMateoBigoritto_SoftwareEngineer_CV.pdf"
+              download
+              className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white text-white rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-all"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Download size={24} />
+              Download CV
+            </motion.a>
+          </div>
           
           <div className="flex justify-center gap-6 mt-12">
             {socialLinks.map((social, index) => (

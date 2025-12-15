@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import 'lenis/dist/lenis.css'
 import './globals.css'
+import { LenisScroll } from '@/components/animations/LenisScroll'
 
 export const metadata: Metadata = {
   title: 'Portfolio - Tu Nombre',
@@ -20,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body>{children}</body>
+      <body>
+        <LenisScroll />
+        {children}
+      </body>
     </html>
   )
 }

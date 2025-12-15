@@ -8,11 +8,11 @@ import { Menu, X } from 'lucide-react'
 const sectionThemes = {
   hero: {
     navBg: 'rgba(255, 255, 255, 0.3)',
-    textColor: 'text-white',
-    buttonBg: 'bg-white',
-    buttonText: 'text-black',
-    borderColor: 'border-white/[0.08]',
-    hoverColor: 'hover:text-white/80'
+    textColor: 'text-gray-900',
+    buttonBg: 'bg-gray-900',
+    buttonText: 'text-white',
+    borderColor: 'border-gray-900/[0.06]',
+    hoverColor: 'hover:text-gray-900/70'
   },
   about: {
     navBg: 'rgba(255, 255, 255, 0.3)',
